@@ -1,0 +1,17 @@
+{
+  "name": "PFinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "oracledb": "^5.5.0"
+  }
+}

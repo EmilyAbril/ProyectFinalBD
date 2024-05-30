@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css">
+    <title>LOGIN IN</title>
+</head>
+<body>
+    <div class="header">
+        <h2>E B A N T E / F U R N I T U R E</h2>
+    </div>
+
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡BIENVENIDO!</h2>
+                <p>Para ver nuestros productos, por favor iniciar sesión con tus datos.</p>
+                <input type="button" value="Iniciar sesión" id="Sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>CREA UNA CUENTA</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-apple'></i>
+                </div>
+                <p>O usa un email para registrarte.</p>
+                <form class="form" action="/register" method="POST">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo electrónico" name="rusuario">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" name="rcontraseña">
+                    </label>
+                    <input type="submit" value="Registrar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡BIENVENIDOS NUEVAMENTE!</h2>
+                <p>Para ver nuestros productos, por favor iniciar sesión con tus datos.</p>
+                <input type="button" value="Registrar" id="Sign-Up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>INICIAR SESIÓN</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-apple'></i>
+                </div>
+                <p>O Inicia sesión con una cuenta.</p>
+                <form class="form" action="/login" method="POST">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo electrónico" name="usuario">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" name="contraseña">
+                    </label>
+                    <input type="submit" value="Iniciar sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

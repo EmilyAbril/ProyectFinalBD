@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-image: url(img/Imagen.png);
+background-size: cover;
+}
+
+/*ENCABEZADO*/
+.header {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #B4A087;
+    color: #ffffff; 
+    text-align: center;
+    font-size: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000
+}
+
+/* IMAGEN Y FONDO DE LO DE INICIAR SESION Y REGISTRARTE */
+.container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1 );
+    height: 400px;
+    max-width: 800px;
+    transition: all 1s ease;
+    margin: 10px;
+    
+}
+
+.information {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #d1c3a8; /*COLOR DE LA IZQUIERDA*/
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-childs{
+    width: 100%;
+    padding: 0 30px;
+}
+
+.info-childs h2 { /*TAMANO DE LA LETRA IZQUIERDA TITULO*/
+    font-size: 2.0rem;
+    color:#ffffff;
+}
+
+.info-childs p { 
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.info-childs input { /*BOTON DE INICIAR SESION*/
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: backgraund-color .3s ease;
+}
+
+.info-childs input:hover{
+    background-color: #B4A087;
+    border: none;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1 );
+}
+
+.form-information { /*PARTE DE LA IZQUIERDA*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #ffffff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-childs { /*PARTE DEL TEXTO IZQUIERDO*/
+    padding: 0 30px;
+}
+
+.form-information-childs h2 { /*TITULO*/
+    color: #333;
+    font-size: 2rem;
+}
+
+.form-information-childs p { /*SUBTITULO*/
+    color: #555;
+}
+
+.icons { /*ICONOS*/
+    margin: 15px 0;
+}
+
+.icons i {
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #B4A087; /*COLOR DE LOS LOGOS*/
+    border: solid thin #B4A087; /*ES EL MARCO DEL LOGO, PODEMOS QUITARLO*/
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1 );
+}
+
+.icons i:hover {
+    background-color: #B4A087;
+    color: #fff;
+}
+
+.form {
+    margin: 30px 0 0 0;
+}
+
+.form label { /*LO DE LOS ICONOS DE GOOGLE Y ESO*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1 );
+}
+
+.form label input {
+     width: 100%;
+     padding: 10px;
+     background-color: #fff;
+     border: none;
+     outline: none;
+     border-radius: 20px;
+     color: #333; /*COLOR DEL TEXTO*/
+}
+
+.form label i { /*ICONOS DE DONDE ESTA EL NOMBRE Y ESO*/
+    color: #B4A087;
+}
+
+.form input[type="submit"] { /*BOTON DE REGISTRARSE*/
+    background-color: #d1c3a8;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1 );
+}
+
+.form input[type="submit"]:hover {
+    background-color: #B4A087; /*COLOR AL PASAR EL CRUSOR*/
+} 
+
+
+
+/*TRANSICION*/
+.hide {
+    position: absolute;
+    transform: translateY(-300%);
+
+}
+
+/*AQUI YA ESTA TODO LO DEL DISENO*/
+/*YA LO DEMAS ES AJUSTE DE PANTALLA*/
+/*RESPONSIVE FORM*/
+
+@media screen and (max-width:750px) { /*CUANDO SEA MENOR A 750PX, LA TIPOGRAFIA SERA DE 12*/
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:580px) { /*CUANDO SEA MENOR A 580PX, LA TIPOGRAFIA SERA DE 10*/
+    html {
+        font-size: 10px;
+    }
+
+    .container-form {
+        height: auto;
+        flex-direction: column; /*CUANDO SE HACE MAS CHICA LA PANTALLA, SE HACE EN COLUMNAS LOS CONTENEDORES*/
+    }
+
+    .information {
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .form-information {
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+}
+
+

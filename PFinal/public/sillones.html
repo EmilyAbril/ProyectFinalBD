@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>MUEBLERÍA - Sillones</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        window.onload = function() {
+            document.getElementById('sillones').scrollIntoView();
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="container-logo">
+                    <h1 class="logo"><a href="home.html">E B A N T E / F U R N I T U R E</a></h1>
+                </div>
+                <div class="container-user">
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                    <div class="user-menu" id="user-menu" style="display: none;">
+                        <a href="#" id="logout">Cerrar sesión</a>
+                    </div>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <div class="content-shopping-cart" id="shopping-cart"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <h2>COMFORT IN FURNITURE</h2>
+            <p>Encuentra la oportunidad perfecta para la decoración de tu hogar solo en ebante furniture.</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="container container-features">
+            <div class="card-feature">
+                <i class="fa-solid fa-plane-up"></i>
+                <div class="feature-content">
+                    <span>Envío gratuito a nivel mundial</span>
+                    <p>En pedido superior a $50,000 MXN</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-wallet"></i>
+                <div class="feature-content">
+                    <span>Contrareembolso</span>
+                    <p>100% garantía de devolución de dinero</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-gift"></i>
+                <div class="feature-content">
+                    <span>Tarjeta regalo especial</span>
+                    <p>Ofrece bonos especiales con regalo</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-headset"></i>
+                <div class="feature-content">
+                    <span>Servicio al cliente 24/7</span>
+                    <p>LLámenos 24/7 al 123-456-7890</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container top-categories" id="sillones">
+            <h1 class="heading-1">CATEGORÍAS</h1>
+            <div class="container-categories">
+                <a href="sofas.html">
+                    <div class="card-category category-sofas">
+                        <p>SOFÁS</p>
+                    </div>
+                </a>
+                <a href="mesas.html">
+                    <div class="card-category category-mesas">
+                        <p>MESAS DE CENTRO</p>
+                    </div>
+                </a>
+                <a href="sillones.html">
+                    <div class="card-category category-sillones">
+                        <p>SILLONES</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--SILLONES-->
+        <div class="navigation-buttons" id="back">
+            <button id="prevBtn" class="nav-button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+        <section class="container top-products">
+            <h1 class="heading-1">SILLONES</h1>
+            <div class="container-products" id="products-container">
+                <!-- Los productos se insertarán aquí -->
+            </div>
+        </section>
+        <div class="navigation-buttons" id="next">
+            <button id="nextBtn" class="nav-button">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!--REVIEWS-->
+        <section class="container reviews">
+            <h1 class="heading-1">REVIEWS</h1>
+
+            <div class="container-reviews">
+                <div class="card-reviews">
+                    <div class="content-reviews">
+                        <h3>Rubén Cano Monge</h3>
+                        <span>29 Noviembre del 2022</span>
+                        <p>Son muy buenos productos y sobre todo, son bonitos. Se nota la calidad y comodidad a simple vista.</p>
+                    </div>
+                </div>
+                <div class="card-reviews">
+                    <div class="content-reviews">
+                        <h3>Samantha Manzano Acosta</h3>
+                        <span>24 Abril del 2023</span>
+                        <p>Excelentes productos, son super bonitos y cómodos. Volvería a comprar aquí 100%.</p>
+                    </div>
+                </div>
+                <div class="card-reviews">
+                    <div class="content-reviews">
+                        <h3>Estefania Palma Higuera</h3>
+                        <span>04 Febrero del 2024</span>
+                        <p>SON HERMOSOS!!!, los volvería a comprar mil veces. Siempre que tengo visitas en mi casa me chulean mis muebles.
+                             Se nota la calidad del producto y además de esto, el servicio que tienen para los clientes es muy bueno.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="js/shopping.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container-products');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+    
+            let scrollAmount = 0;
+    
+            prevBtn.onclick = function() {
+                container.scrollBy({
+                    top: 0,
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            };
+    
+            nextBtn.onclick = function() {
+                container.scrollBy({
+                    top: 0,
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            };
+
+            // Fetch products from server
+            fetch('http://localhost:3000/products?categoria=3')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(products => {
+                    console.log('Productos obtenidos:', products); // Log de los productos obtenidos
+                    const productsContainer = document.getElementById('products-container');
+                    productsContainer.innerHTML = ''; // Clear existing products
+                    products.forEach(product => {
+                        if (!product.NOMBRE) {
+                            console.error('Producto sin nombre:', product);
+                            return;
+                        }
+                        const productDiv = document.createElement('div');
+                        productDiv.className = 'card-product';
+                        productDiv.innerHTML = `
+                            <div class="container-img">
+                                <img src="img/${product.NOMBRE.toLowerCase()}.png" alt="${product.NOMBRE}" />
+                                <div class="button-group">
+                                    <span>
+                                        <i class="fa-regular fa-eye"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-card-product">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3>${product.NOMBRE}</h3>
+                                <span class="add-cart" data-id="${product.ID_PRODUCTO}" data-name="${product.NOMBRE}" data-price="${product.PRECIO}" data-image="img/${product.NOMBRE.toLowerCase()}.png">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </span>
+                                <p class="price">$${product.PRECIO}MXN </p>
+                            </div>
+                        `;
+                        productsContainer.appendChild(productDiv);
+                    });
+
+                    // Añadir event listeners a los nuevos botones
+                    const addCartButtons = document.querySelectorAll('.add-cart');
+                    addCartButtons.forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            console.log('Botón de agregar al carrito clicado');
+                            const productId = e.currentTarget.dataset.id;
+                            const productName = e.currentTarget.dataset.name;
+                            const productPrice = parseInt(e.currentTarget.dataset.price, 10);
+                            const productImage = e.currentTarget.dataset.image;
+
+                            const product = {
+                                id: productId,
+                                name: productName,
+                                price: productPrice,
+                                image: productImage,
+                                quantity: 1
+                            };
+
+                            addToCart(product);
+                        });
+                    });
+                })
+                .catch(error => console.error('Error al obtener los productos:', error));
+        });
+
+        function addToCart(product) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(item => item.id === product.id);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            console.log('Producto agregado al carrito:', product); // Log para verificar el producto agregado
+            console.log('Contenido del carrito:', cart); // Log para verificar el contenido del carrito
+            alert('Producto agregado al carrito');
+
+            // Enviar al servidor
+            fetch('http://localhost:3000/cart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id_producto: product.id, cantidad: product.quantity })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => console.log('Carrito actualizado en el servidor:', data))
+            .catch(error => console.error('Error al actualizar el carrito en el servidor:', error));
+        }
+    </script>
+</body>
+</html>

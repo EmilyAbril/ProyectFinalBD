@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles-cart.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container-logo">
+                <h1 class="logo"><a href="home.html">E B A N T E / F U R N I T U R E</a></h1>
+            </div>
+            <div class="container-user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="container">
+            <h1 class="heading-1">Carrito de Compras</h1>
+            <div id="cart-items" class="cart-items"></div>
+            <!-- Parte de cart.html -->
+<!-- Parte de cart.html -->
+<div class="cart-summary">
+    <h2>Total: $<span id="total-price">0</span>MXN</h2>
+    <button id="checkout-button" class="checkout-button">Proceder al Pago</button>
+</div>
+
+<script src="js/shopping.js"></script>
+<script>
+    document.getElementById('checkout-button').addEventListener('click', () => {
+        window.open('purchase.html', 'Compra', 'width=800,height=600');
+    });
+</script>
+        </section>
+    </main>
+</body>
+</html>
